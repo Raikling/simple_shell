@@ -1,0 +1,21 @@
+#include "shell.h"
+
+/**
+ * read_line - read user line
+ * Return: line
+ */
+
+char *read_line(void)
+{
+char *line = NULL;
+size_t len = 0;
+sszie_t n;
+
+n = getline(&line, &len, stdin);
+
+ if (n == -1)
+{
+return (NULL);
+}
+return (line);
+}
